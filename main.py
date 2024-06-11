@@ -12,6 +12,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 def transform_text(text):
     text = text.lower()
+    nltk.download('punkt')
     text = nltk.word_tokenize(text)
 
     y = []
